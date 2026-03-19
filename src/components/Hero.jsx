@@ -56,8 +56,21 @@ export default function Hero() {
               </a>
             </div>
 
+            {/* Price highlight */}
+            <div className="inline-flex items-center gap-3 bg-white border border-gold/30 rounded-2xl px-5 py-3.5 mt-8 shadow-sm shadow-gold/10">
+              <div className="flex flex-col items-center leading-none bg-gold rounded-xl px-3 py-2">
+                <span className="text-white text-[10px] font-semibold">החל מ</span>
+                <span className="text-white text-2xl font-black leading-none">₪45</span>
+                <span className="text-white/80 text-[9px]">לעובד/חודש</span>
+              </div>
+              <div className="text-right">
+                <p className="text-navy font-bold text-sm">המחיר הנמוך בשוק</p>
+                <p className="text-gray-400 text-xs font-light">ללא עמלות נסתרות · ללא הפתעות</p>
+              </div>
+            </div>
+
             {/* Quick trust signals */}
-            <div className="flex flex-wrap gap-6 mt-10 text-sm text-gray-400">
+            <div className="flex flex-wrap gap-6 mt-8 text-sm text-gray-400">
               <div className="flex items-center gap-1.5">
                 <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
