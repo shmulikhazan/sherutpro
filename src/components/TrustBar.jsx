@@ -52,8 +52,24 @@ const companies = [
 
 export default function TrustBar() {
   return (
-    <section className="bg-navy py-10">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="bg-navy py-10 relative overflow-hidden">
+      {/* Background decoration */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        {/* Dot grid */}
+        <svg className="absolute inset-0 w-full h-full opacity-[0.07]" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1.5" fill="white" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#dots)" />
+        </svg>
+        {/* Glowing orbs */}
+        <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-blue-600/20 blur-3xl" />
+        <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-blue-400/10 blur-3xl" />
+        <div className="absolute left-1/2 -translate-x-1/2 top-0 w-96 h-32 bg-white/[0.03] blur-2xl rounded-full" />
+      </div>
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <p className="text-white/50 text-sm font-medium text-center mb-8 tracking-widest uppercase">
           מעל 212 מעסיקים כבר בוטחים בנו
         </p>
@@ -72,3 +88,4 @@ export default function TrustBar() {
     </section>
   );
 }
+
