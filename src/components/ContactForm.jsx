@@ -30,50 +30,63 @@ export default function ContactForm() {
   return (
     <section id="contact" className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
 
-          {/* Left side — copy */}
-          <div className="text-right order-2 lg:order-1">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">צרו קשר</span>
-            <h2 className="text-4xl font-extrabold text-navy mt-3 mb-5 leading-tight">
-              קבלו ייעוץ ראשוני
-              <br />
-              ללא עלות
-            </h2>
-            <p className="text-gray-400 text-lg leading-relaxed font-light mb-8">
-              השאירו פרטים ונחזור אליכם תוך יום עסקים אחד לשיחה קצרה, בלי מחויבות.
-            </p>
+          {/* Left side — copy with background photo */}
+          <div className="relative rounded-2xl overflow-hidden order-2 lg:order-1 min-h-[360px]">
+            {/* Background photo */}
+            <img
+              src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=900&q=80"
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            {/* Dark navy overlay */}
+            <div className="absolute inset-0 bg-navy/80" />
 
-            <div className="space-y-4">
-              {[
-                { icon: '✓', text: 'ייעוץ ראשוני ללא עלות' },
-                { icon: '✓', text: 'ללא התחייבות' },
-                { icon: '✓', text: 'חזרה תוך יום עסקים' },
-              ].map((item) => (
-                <div key={item.text} className="flex items-center gap-3">
-                  <span className="w-6 h-6 rounded-full bg-green-100 text-green-600 text-xs font-bold flex items-center justify-center flex-shrink-0">
-                    {item.icon}
-                  </span>
-                  <span className="text-gray-600 font-medium">{item.text}</span>
-                </div>
-              ))}
-            </div>
+            {/* Content on top */}
+            <div className="relative h-full p-10 flex flex-col justify-center text-right">
+              <span className="text-gold text-sm font-semibold tracking-widest uppercase mb-3 block">צרו קשר</span>
+              <h2 className="text-4xl font-extrabold text-white mt-1 mb-5 leading-tight">
+                קבלו ייעוץ ראשוני
+                <br />
+                ללא עלות
+              </h2>
+              <p className="text-white/70 text-lg leading-relaxed font-light mb-8">
+                השאירו פרטים ונחזור אליכם תוך יום עסקים אחד לשיחה קצרה, בלי מחויבות.
+              </p>
 
-            <div className="mt-10 pt-8 border-t border-gray-100">
-              <p className="text-sm text-gray-400 mb-3">מעדיפים ליצור קשר ישירות?</p>
-              <a
-                href="tel:+972501234567"
-                className="text-navy font-semibold text-lg hover:text-gold transition-colors"
-              >
-                050-123-4567
-              </a>
+              <div className="space-y-4">
+                {[
+                  'ייעוץ ראשוני ללא עלות',
+                  'ללא התחייבות',
+                  'חזרה תוך יום עסקים',
+                ].map((text) => (
+                  <div key={text} className="flex items-center gap-3">
+                    <span className="w-6 h-6 rounded-full bg-gold/20 border border-gold/40 text-gold text-xs font-bold flex items-center justify-center flex-shrink-0">
+                      ✓
+                    </span>
+                    <span className="text-white/80 font-medium">{text}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-10 pt-8 border-t border-white/10">
+                <p className="text-sm text-white/40 mb-3">מעדיפים ליצור קשר ישירות?</p>
+                <a
+                  href="tel:+972501234567"
+                  className="text-gold font-semibold text-lg hover:text-white transition-colors"
+                >
+                  050-123-4567
+                </a>
+              </div>
             </div>
           </div>
 
           {/* Right side — form */}
           <div className="order-1 lg:order-2">
             {submitted ? (
-              <div className="bg-green-50 border border-green-100 rounded-2xl p-12 text-center">
+              <div className="bg-green-50 border border-green-100 rounded-2xl p-12 text-center h-full flex flex-col items-center justify-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
                   <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -91,7 +104,7 @@ export default function ContactForm() {
                 data-netlify="true"
                 netlify-honeypot="bot-field"
                 onSubmit={handleSubmit(onSubmit)}
-                className="bg-[#F7F8FA] rounded-2xl p-8 border border-gray-100"
+                className="bg-[#F7F8FA] rounded-2xl p-8 border border-gray-100 h-full flex flex-col justify-center"
               >
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="hidden">

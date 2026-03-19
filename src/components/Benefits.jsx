@@ -49,27 +49,53 @@ export default function Benefits() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {benefits.map((b, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:shadow-navy/5 transition-all hover:-translate-y-1 group"
-            >
-              {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-navy/5 text-navy flex items-center justify-center mb-6 group-hover:bg-navy group-hover:text-white transition-all">
-                {b.icon}
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Photo column */}
+          <div className="relative rounded-2xl overflow-hidden h-[480px] shadow-2xl shadow-navy/15 order-2 lg:order-1">
+            <img
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80"
+              alt="צוות מקצועי בפגישת עבודה"
+              className="w-full h-full object-cover"
+            />
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/10 to-transparent" />
 
-              {/* Stat */}
-              <div className="mb-4">
-                <span className="text-4xl font-black text-navy leading-none">{b.stat}</span>
-                <span className="block text-xs text-gray-400 mt-1 font-medium">{b.statLabel}</span>
-              </div>
-
-              <h3 className="text-xl font-bold text-navy mb-3">{b.title}</h3>
-              <p className="text-gray-400 leading-relaxed font-light text-[15px]">{b.desc}</p>
+            {/* Floating stat badge */}
+            <div className="absolute bottom-6 right-6 bg-white rounded-2xl px-5 py-4 shadow-xl">
+              <span className="text-3xl font-black text-navy leading-none block">212+</span>
+              <span className="text-xs text-gray-400 font-medium mt-0.5 block">מעסיקים פעילים</span>
             </div>
-          ))}
+
+            {/* Second floating badge */}
+            <div className="absolute top-6 left-6 bg-gold rounded-xl px-4 py-2.5 shadow-lg">
+              <span className="text-navy text-xs font-bold">ניסיון מוכח של 5+ שנים</span>
+            </div>
+          </div>
+
+          {/* Benefit cards column */}
+          <div className="space-y-5 order-1 lg:order-2">
+            {benefits.map((b, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:shadow-navy/5 transition-all hover:-translate-y-0.5 group flex gap-5 items-start"
+              >
+                {/* Icon */}
+                <div className="w-12 h-12 rounded-xl bg-navy/5 text-navy flex items-center justify-center flex-shrink-0 group-hover:bg-navy group-hover:text-white transition-all">
+                  {b.icon}
+                </div>
+
+                <div className="flex-1 text-right">
+                  {/* Stat */}
+                  <div className="flex items-baseline gap-2 justify-end mb-1">
+                    <span className="text-xs text-gray-400 font-medium">{b.statLabel}</span>
+                    <span className="text-2xl font-black text-navy leading-none">{b.stat}</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-navy mb-2">{b.title}</h3>
+                  <p className="text-gray-400 leading-relaxed font-light text-[14px]">{b.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

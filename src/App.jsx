@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import TrustBar from './components/TrustBar';
 import HowItWorks from './components/HowItWorks';
 import Benefits from './components/Benefits';
+import Pricing from './components/Pricing';
 import Testimonial from './components/Testimonial';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
@@ -17,6 +18,7 @@ export default function App() {
         <TrustBar />
         <HowItWorks />
         <Benefits />
+        <Pricing />
         <Testimonial />
         <ContactForm />
       </main>
