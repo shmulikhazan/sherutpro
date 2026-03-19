@@ -10,9 +10,9 @@ export default {
           dark: '#0A1B33',
         },
         gold: {
-          DEFAULT: '#C9A84C',
-          light: '#E8C96A',
-          dark: '#A8863A',
+          DEFAULT: '#fbb03c',
+          light: '#fcc56a',
+          dark: '#e09520',
         },
       },
       fontFamily: {

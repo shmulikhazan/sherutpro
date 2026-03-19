@@ -58,7 +58,7 @@ export default function DashboardMockup() {
                     className="w-full rounded-t-sm"
                     style={{
                       height: `${h}%`,
-                      backgroundColor: h === 100 ? '#C9A84C' : '#0F2444',
+                      backgroundColor: h === 100 ? '#fbb03c' : '#0F2444',
                       opacity: h === 100 ? 1 : 0.6 + i * 0.03,
                     }}
                   />
