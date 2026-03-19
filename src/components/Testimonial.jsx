@@ -9,7 +9,7 @@ export default function Testimonial() {
           className="w-full h-full object-cover"
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-navy/90" />
+        <div className="absolute inset-0 bg-navy/88" />
       </div>
 
       <div className="relative max-w-4xl mx-auto px-6 text-center">
@@ -24,21 +24,27 @@ export default function Testimonial() {
         </svg>
 
         <blockquote className="text-white text-2xl lg:text-3xl font-light leading-relaxed mb-10 max-w-3xl mx-auto">
-          "מאז שעברנו לשירות PRO, אנחנו לא צריכים לחשוב על פנסיה בכלל. הכל מסודר, מדויק, בזמן — ועם דוחות ברורים שאני מבין בשניה. זה שחרר לנו זמן ניהול משמעותי."
+          "מאז שעברנו לשירות PRO, אנחנו לא צריכים לחשוב על פנסיה בכלל. הכל מסודר, מדויק, בזמן. בשנה הראשונה חסכנו קנסות של כמעט ₪18,000 — וזמן ניהול שלא יסולא בפז."
         </blockquote>
 
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-10 h-px bg-gold mb-4" />
-          <p className="text-white font-semibold text-base">מנכ"ל, חברת טכנולוגיה בת 80 עובדים</p>
-          <p className="text-white/40 text-sm">תל אביב</p>
+        {/* Avatar + attribution */}
+        <div className="flex flex-col items-center gap-3">
+          <img
+            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=80&h=80&q=80"
+            alt="רון שמיר"
+            className="w-16 h-16 rounded-full object-cover border-2 border-gold/40"
+          />
+          <div className="w-10 h-px bg-gold" />
+          <p className="text-white font-semibold text-base">רון שמיר, מנכ"ל קבוצת שמיר-טק</p>
+          <p className="text-white/40 text-sm">רמת גן · 67 עובדים</p>
         </div>
 
         {/* Stats row */}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-white/10 pt-12">
           {[
-            { num: '200+', label: 'מעסיקים פעילים' },
+            { num: '212+', label: 'מעסיקים פעילים' },
             { num: '99.8%', label: 'דיוק בדיווחים' },
-            { num: '5 שנים', label: 'ניסיון בתחום' },
+            { num: '5+ שנים', label: 'ניסיון בתחום' },
           ].map((s) => (
             <div key={s.label}>
               <div className="text-4xl font-black text-gold mb-2">{s.num}</div>

@@ -6,7 +6,7 @@ export default function Pricing() {
           <span className="text-gold text-sm font-semibold tracking-widest uppercase">תמחור</span>
           <h2 className="text-4xl font-extrabold text-navy mt-3 mb-4">שקט נפשי במחיר שלא תאמינו</h2>
           <p className="text-gray-400 text-lg font-light">
-            פחות מכוס קפה ביום. ללא הפתעות, ללא עמלות נסתרות.
+            מחיר שקוף ואחיד לעובד. ללא עמלות הפתעה, ללא עלויות הקמה.
           </p>
         </div>
 
@@ -25,7 +25,7 @@ export default function Pricing() {
               <div className="mb-6">
                 <div className="flex items-end gap-2 mb-1">
                   <span className="text-white/50 text-lg line-through font-light">₪120</span>
-                  <span className="text-xs text-white/40 mb-1">לעובד/חודש</span>
+                  <span className="text-xs text-white/40 mb-1">מחיר שוק ממוצע</span>
                 </div>
                 <div className="flex items-baseline gap-1">
                   <span className="text-gold text-6xl font-black leading-none">₪45</span>

@@ -36,8 +36,18 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="how-it-works" className="relative py-24 bg-white overflow-hidden">
+      {/* Subtle ambient background photo */}
+      <div className="absolute inset-0 pointer-events-none">
+        <img
+          src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=60"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover opacity-[0.04]"
+        />
+      </div>
+
+      <div className="relative max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-gold text-sm font-semibold tracking-widest uppercase">תהליך העבודה</span>
           <h2 className="text-4xl font-extrabold text-navy mt-3 mb-4">שלושה שלבים לשקט נפשי</h2>
