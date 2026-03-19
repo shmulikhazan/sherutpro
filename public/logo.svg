@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 72" fill="none">
+  <!-- Company name -->
+  <text x="110" y="30" font-family="Heebo, Arial, sans-serif" font-size="28" font-weight="800" fill="#0F2444" text-anchor="middle" direction="rtl">שירות PRO</text>
+  <!-- Gold banner -->
+  <rect x="10" y="36" width="200" height="20" rx="3" fill="#C9A84C"/>
+  <text x="110" y="50" font-family="Heebo, Arial, sans-serif" font-size="10" font-weight="500" fill="#ffffff" text-anchor="middle" direction="rtl">עושים את העבודה בשבילך</text>
+  <!-- Subtitle -->
+  <text x="110" y="68" font-family="Heebo, Arial, sans-serif" font-size="10" font-weight="700" fill="#0F2444" text-anchor="middle" direction="rtl">תפעול פנסיוני</text>
+</svg>
